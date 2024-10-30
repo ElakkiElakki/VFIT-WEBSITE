@@ -18,10 +18,9 @@ body, html {
 }
 
 #navbar{
-  background-color: #000715;}
+  background-color: #000715;
+}
   
-
-
 #nav-adjust{
   margin-left: auto;
 }
@@ -81,8 +80,8 @@ body, html {
 
 
 #hero {
-  background: url('./assets/bg.png') no-repeat center center/cover;
-  height: 100vh;
+  /* background: url('./assets/bg.png') no-repeat center center/cover; */
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,6 +89,13 @@ body, html {
   border-radius: 25px;
   padding: 20px; 
   padding-top: 10vw; 
+}
+
+.hero-section {
+  background: url('./assets/bg.png') no-repeat center center / cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -132,13 +138,8 @@ a{
   background-color: black; 
 }
 
-
-
-
 .btn-primary:hover {
-
-background-color: rgb(142, 94, 202);
-
+    background-color: rgb(142, 94, 202);
 }
  .btn-primary:focus {
       outline: none; 
@@ -147,9 +148,7 @@ background-color: rgb(142, 94, 202);
 
 
 .btn-primary:active {
-  
   background-color: rgb(75, 39, 119);
-  
   }
 
 .hero-content h1 {
@@ -162,7 +161,7 @@ background-color: rgb(142, 94, 202);
 .hero-content p {
   font-family: "arial";
   font-size: 1.3vw;
-font-weight:bold;
+  font-weight:bold;
 
 }
 
@@ -211,14 +210,11 @@ font-weight:bold;
   margin-left: 20vw;
 }
 
-
 .fa-bars {
   color: white;
   font-size: 24px;
 }
-@media (min-width: 576px){
 
-}
 @media (max-width: 576px) {
   body, html {
       background-color: #000715; 
@@ -235,8 +231,6 @@ font-weight:bold;
     z-index: 1000;
     display: flex;
     align-items: center;
-   
-   
   }
 
   #nav-item1, #nav-item2, #nav-item3, #nav-item4, #nav-item5, #nav-item6 {
@@ -251,18 +245,22 @@ font-weight:bold;
 
   .hero-content {
     margin: 40vw auto;
-      position: relative;
-      padding-top:6vw;
-    
-     
+    position: relative;
+    padding-top:6vw; 
   }
 
   .hero-content h1 {
       font-size: 2.5vw; 
   }
-.hero-section{
-  margin-top:10vw;
-}
+
+  .hero-section{
+      margin-top:10vw;
+      background-size: cover;
+      background-position: center;
+      width: 100vw;
+      height: 100vh;
+  }
+
   .hero-content p {
       font-size: 2.5vw; 
   }
@@ -271,8 +269,6 @@ font-weight:bold;
       height: auto; 
       width: 90vw; 
       padding: 5vw;
-      
-      
   }
 
   .hero-image {
@@ -289,10 +285,6 @@ font-weight:bold;
     width: 35vw; 
     height: auto; 
     position: relative; 
-    
-    
-    
-   
   }
 
   .logo-section {
@@ -318,27 +310,23 @@ font-weight:bold;
     row-gap: 10px; /* Space between each row */
     justify-items: center; /
   }
-  
-    
-  
+
     .hero-image .icons .icon2 {
         margin-left: 8vw;
     }
   
     .hero-image .icons .icon3 {
-      
-        margin-top:5vw;
+       margin-top:5vw;
        width:4vw;
        height:auto;
     }
-  
-  
-  
+
   .btn-primary {
       padding: 2vw 10vw; 
       font-size: 3vw;
       border-radius: 1.5vw;
   }
+
 }
 
 @media (min-width: 577px) and (max-width: 767px) {
@@ -352,8 +340,6 @@ font-weight:bold;
     background-color: #000715;
     display: flex;
     align-items: center;
-    
-   
   }
 
   #nav-item1, #nav-item2, #nav-item3, #nav-item4, #nav-item5, #nav-item6 {
@@ -370,13 +356,12 @@ font-weight:bold;
       margin-top: 36vw;
       padding-top: 4vw;
       height:auto;
-      
-     
-      
   }
   .hero-section{
-    gap:1vw;
-    height:auto;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 160vh;
   }
 
   .hero-content h1, .hero-content p {
@@ -385,10 +370,8 @@ font-weight:bold;
 
   .hero-alignment {
       width: 85vw;
-      
       height:auto; 
       padding: 4vw;
-   
   }
 
   .hero-image {
@@ -397,22 +380,15 @@ font-weight:bold;
     align-items: flex-start;
     margin-right: 12vw;
     height:auto;
-    
-  
-    
   }
 
   .robo {
-    
     width: 30vw;
     height: auto;
     margin-top:0vw;
-    
-
   }
 
   .hero-image .icons {
-    
     display: grid;
     grid-template-rows: repeat(3, auto); /* Places icons in 3 rows */
     row-gap: 8px;
@@ -489,9 +465,14 @@ font-weight:bold;
   .section {
     margin: 0;
     padding: 0;
-    
   }
 
+  .hero-section {
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Adjust height as needed */
+  }
+  
   .hero-image .icons .icon3 {
     margin-left: 18vw;
   }
@@ -527,12 +508,6 @@ section {
   max-width: 900px;
   margin: 0 auto;
 }
-
-
-
-
-
-
 
 
 /************************ Home-about-us *****************************/
