@@ -80,8 +80,6 @@ body, html {
 
 
 #hero {
-  /* background: url('./assets/bg.png') no-repeat center center/cover; */
-  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,10 +221,10 @@ a{
 }
 
 
-@media (max-width: 576px) {
+@media only screen and (min-width:375px) and (max-width: 576px) {
   body, html {
       background-color: #000715; 
-      padding-left: 6vw;
+      /* padding-left: 6vw; */
   }
 
   .header {
@@ -255,6 +253,13 @@ a{
     margin: 40vw auto;
     position: relative;
     padding-top:6vw; 
+    margin-left: 50px;
+  }
+
+  #hero{
+    position: relative;
+    top:50px;
+    width:800px;
   }
 
   .hero-content h1 {
@@ -262,11 +267,11 @@ a{
   }
 
   .hero-section{
-      margin-top:10vw;
+      /* margin-top:10vw; */
       background-size: cover;
       background-position: center;
       width: 100vw;
-      height: 100vh;
+      height: 140vh;
   }
 
   .hero-content p {
@@ -275,8 +280,9 @@ a{
 
   .hero-alignment {
       height: auto; 
-      width: 90vw; 
+      width: 100vw; 
       padding: 5vw;
+      padding-left: 40px;
   }
 
   .hero-image {
@@ -285,11 +291,15 @@ a{
     justify-content: space-between; /* Adjust to space columns evenly */
     align-items: flex-start;
     position: relative;
-    margin-right:15vw; /* Align items to the start (top) */
+    margin-right:15vw;
+    margin-bottom: 40px;
+  }
+
+  .hero-btn{
+    padding-left: 50px;
   }
 
   .robo {
-    margin-top:5vw;
     width: 35vw; 
     height: auto; 
     position: relative; 
@@ -297,30 +307,36 @@ a{
 
   .logo-section {
     display: flex;
-    flex-direction: column; /* Stack logo rows vertically */
-    width: 40vw; /* Adjust width as needed */
+    flex-direction: column;
+    width: 40vw; 
   }
 
   .logo-row {
     display: flex;
-    justify-content: center; /* Center content within each row */
-    margin: 5px 0; /* Add margin between rows */
+    justify-content: center; 
+    margin: 5px 0; 
   }
 
   .logo-row img {
-    width: 0%; /* Adjust logo size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 0%; 
+    height: auto; 
   }
 
   .hero-image .icons {
     display: grid;
-    grid-template-rows: repeat(3, auto); /* Creates 3 rows, one for each icon */
-    row-gap: 10px; /* Space between each row */
-    justify-items: center; /
+    grid-template-rows: repeat(3, auto);
+    row-gap: 10px; 
+    justify-items: center; 
+    padding: 40px;
   }
 
+  .icons{
+    margin-bottom: 200px;
+  }
+  
     .hero-image .icons .icon2 {
-        margin-left: 8vw;
+        margin-top: 20px;
+        margin-left: 12vw;
     }
   
     .hero-image .icons .icon3 {
@@ -335,12 +351,12 @@ a{
       border-radius: 1.5vw;
   }
 
-}
+} 
 
 @media (min-width: 577px) and (max-width: 767px) {
   body, html {
       background-color: #000715; 
-      padding-left: 4vw;
+      /* padding-left: 4vw; */
   }
 
   .header {
@@ -360,6 +376,12 @@ a{
       width: 25vw; 
   }
 
+  #hero{
+    position: relative;
+    top:50px;
+    width:1200px;
+  }
+
   .hero-content {
       margin-top: 36vw;
       padding-top: 4vw;
@@ -368,7 +390,7 @@ a{
   .hero-section{
     background-size: cover;
     background-position: center;
-    max-width: 100%;
+    max-width: 120%;
     height: 160vh;
   }
 
@@ -402,6 +424,11 @@ a{
     margin-left: 0px;
   }
 
+  .icons{
+    position: relative;
+    bottom: 50px;
+  }
+
   .hero-image .icons {
     display: grid;
     grid-template-rows: repeat(3, auto); /* Places icons in 3 rows */
@@ -410,16 +437,18 @@ a{
     padding-bottom: 40px;
   }
 
-  .hero-image .icons .icon1{
-    padding-bottom: 10px;
+  .icon2{
+    position: relative;
+    bottom: 10px;
   }
 
   .hero-image .icons .icon3 {
     width: 8vw;
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     gap: 6vw;
-    padding-top:10px;
+    padding-left: 20px;
+    /* padding-top:10px; */
   }
 
   .btn-primary {
@@ -427,9 +456,9 @@ a{
       font-size: 2.5vw;
       border-radius: 1vw;
   }
-}
+} 
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 767px) and (max-width: 1200px) {
   .hero-content h1 {
     font-size: 3.5vw;
   }
@@ -514,8 +543,8 @@ a{
 
 
 
-/* Container and section adjustments */
-.container {
+/* Need to see this and remove comments accordingly */
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -535,86 +564,186 @@ section {
 .contact-container {
   max-width: 900px;
   margin: 0 auto;
-}
+} */
 
 
 /************************ Home-about-us *****************************/
 
-.about-container{
-  background-image: url("./assets/about-bg.png");
+/* Base Styles */
+#about-section {
+  padding: 20px;
+  background-image: url('./assets/about-bg.png'); /* Replace with your background image path */
   background-size: cover;
-  background-position: no-repeat;
-  height:80vh;
-  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-} 
-
-.about-content{
-  background-color: #fff;
-  height:auto;
-  width:70vw;
-  color:#000;
-  margin-left:5vw;
-  margin-right:5vw;
-  border-radius:1vw;
-  font-family:"arial";
-  align-items: center;
-  text-align: center;
-  padding-left:3vw;
-  padding-right:3vw;
+  min-height: 100vh;
+  margin-top: 80px;
 }
 
-.about-title{
-  margin-top: 15px;
+.about-container {
+  margin-top: 5vw;
+  background-color: rgba(255, 255, 255); /* Semi-transparent background for readability */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 80%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  color: #000000;
+  font-family: "Roboto";
+}
+
+.about-title {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 2.5em;
-  color: black;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.about-description{
-  font-family:"arial";
-  font-size: 1.5vw;
-  margin-right: 10px;
-  margin-top: 30px;
-  padding-left: 20px;
-  
+.about-description {
+  font-size: 1em;
+  /* margin-bottom: 15px; */
 }
+
 .learn-more {
-  display: inline-block;
-  font-size: 1.5vw;
-  color: #0056b3;
+  font-size: 1.8em;
+  color: blue;
   text-decoration: none;
-  margin: 15px;
-  margin-right: 15px;
-  font-weight: bold;
+  float: right;
+  padding-right: 20px;
   font-family: "Roboto";
 }
-.learn-more:hover {
-  color: #0056b3;
-  font-size: 1.5vw;
 
+@media (max-width:480px){
+  .about-content{
+    margin-left: 50px;
+  }
 }
+
+/* Mobile (up to 576px) */
 @media (max-width: 576px) {
-.about-class{
-  margin-top:27vw;
+
+  #about-section{
+    margin-top: 120px;
+  }
+
+  .about-class {
+    margin-top: 10vw;
+    padding: 15px;
+    width: 800px;
+  }
+
+  .about-container{
+    max-width: 100%;
+  }
+
+  .learn-more {
+    font-size: 3vw;
+  }
+
+  .about-title {
+    font-size: 1.5em;
+  }
+
+  .about-description {
+    font-size: 0.9em;
+
+  }
 }
-.about-class a{
-  font-size:2vw;
-}
-}
+
+/* Small Devices (portrait tablets, 577px to 767px) */
 @media (min-width: 577px) and (max-width: 767px) {
-  .about-class{
-    margin-top:20vw;
+  .about-class {
+    margin-top: 8vw;
+    /* padding: 20px; */
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .about-title {
+    font-size: 1.8em;
+  }
+
+  .about-description {
+    font-size: 1em;
+  }
+
+  .learn-more {
+    font-size: 1.4em;
+    color: blue;
+    text-decoration: none;
+    float: right;
+    padding-right: 20px;
+  }
   
+}
+
+/* Medium Devices (landscape tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-class {
+    margin-top: 5vw;
+    /* padding: 25px; */
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 2em;
+  }
+
+  .about-description {
+    font-size: 1.1em;
+  }
+}
+
+/* Large Devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-class {
+    padding: 30px;
+    max-width: 60%;
+  }
+
+  .about-title {
+    font-size: 2.2em;
+  }
+
+  .about-description {
+    font-size: 1.1em;
+  }
+
+  .learn-more {
+    font-size: 1em;
+    font-family: "Roboto";
+  }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .about-class {
+    padding: 40px;
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 2.5em;
+  }
+
+  .about-description {
+    font-size: 1.8em;
+    align-items: center;
+    text-align: center;
   }
 }
 
 
+
 /************************ Home-Services *****************************/
+
+#Home-Services-Section{
+  margin-top: 60px;
+}
 
 .main-container {
   display: flex;
@@ -679,12 +808,8 @@ section {
 }
 
 .services-btn{
-  /* position: relative;
-  bottom: 50px;
-  padding-bottom:0vw; */
   margin-top: 30px;
   height:80px;
-  /* width:250px; */
 }
 
 .services-card1 {
@@ -721,8 +846,16 @@ section {
   color: white;
   margin-bottom:3vw;
 }
+@media only screen and (max-width: 400px){
+  .services {
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    left:160px;
+  }
+}
 
-@media (max-width: 575.98px) {
+@media (max-width: 575px) {
   .services-container {
     flex-direction: column;
     gap: 2vw;
@@ -746,6 +879,7 @@ section {
   .services-para {
     font-size: 4vw;
     width: 90%;
+    margin-left: 35px;
   }
 
   .services-content1-btn {
@@ -756,7 +890,31 @@ section {
   }
 
   .services {
-    font-size: 6vw;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    left:160px;
+  }
+
+  .services-card {
+    width: 23%; 
+    min-width: 750px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1vw;
+    padding: 0px;
+    border-radius: 10px;
+  }
+  
+  .services-card img {
+    /* max-width: 550px; */
+    margin-top: 1.8vw;
+    border-radius: 50%;
+    margin-left:240px;
   }
 }
 
@@ -793,6 +951,7 @@ section {
   .services {
     font-size: 4vw;
   }
+
 }
 
 /* Small desktop view (min-width: 768px and max-width: 991.98px) */
@@ -866,9 +1025,9 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
   padding: 20px;
   text-align: center;
+  margin-top: 30px;
 }
 
 .portfolio-title {
@@ -877,6 +1036,7 @@ section {
   font-size: 2.5em;
   color: #FFFFFF;
   margin-bottom: 1em;
+  text-align: center;
 }
 
 .portfolio-content {
@@ -923,7 +1083,39 @@ section {
   color: #05E6B9;
 }
 
-@media (max-width: 768px) {
+/* Mobile devices (480px and below) */
+@media (max-width: 576px) {
+
+  #Portfolio-section{
+      margin-top: 0px;
+  }
+
+  .portfolio-title {
+      font-size: 1.8em;
+      text-align: center;
+      margin-left: 250px;
+  }
+  .portfolio-content {
+    width: 700px;
+    height:50vh;
+    padding: 0px;
+    gap: 0px;
+    margin-left: 290px;
+  }
+  .portfolio-image img {
+    max-width: 260px;
+    margin-left:10px;
+  }
+  .portfolio-text p {
+      font-size: 20px;
+      margin-bottom: 15px;
+  }
+  .portfolio-text h4 {
+      font-size: 22px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px)  {
   .portfolio-content {
       flex-direction: column;
       height: auto;
@@ -944,28 +1136,6 @@ section {
   }
 }
 
-/* Mobile devices (480px and below) */
-@media (max-width: 480px) {
-  .portfolio-title {
-      font-size: 1.8em;
-  }
-  .portfolio-content {
-      width: 90vw;
-      padding: 10px;
-      gap: 10px;
-  }
-  .portfolio-image img {
-    max-width: 150px;
-  }
-  .portfolio-text p {
-      font-size: 20px;
-      margin-bottom: 15px;
-  }
-  .portfolio-text h4 {
-      font-size: 22px;
-  }
-}
-
 @media (min-width: 770px) {
   .portfolio-image img {
       width: 250px; /* or any width you prefer for larger screens */
@@ -975,19 +1145,16 @@ section {
 
 /************************ Blogs *****************************/
 
+#Blog-Section{
+  margin-top:30px;
+}
+
 .blog-title {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 2.5em;
   color: #FFFFFF;
-  /* margin-bottom: 1em; */
-}
-
-.blog-card {
-  margin-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .slideshow-container {
@@ -1065,11 +1232,30 @@ section {
   background-color: #d4d4d4;
 }
 
+@media only screen and (max-width:575px){
+  .blog-card {
+    margin: 0px;
+    display: block;
+  }
+  #Blog-Section{
+    position: relative;
+    left:100px;
+  }
+  .blog-title{
+    position: relative;
+    left: 50px;
+  }
+}
 
 
 /************************ Contact Us *****************************/
 
 /* MADE RESPONSIVE */
+
+
+#Contact-section{
+  margin-top: 40px;
+}
 
 .contactus-title{
   font-family: "Raleway", sans-serif;
@@ -1088,7 +1274,6 @@ section {
   background-color: #1c96ed;
   height: 300px;
   border-radius: 20px;
-  /* width:1800px; */
 }
 
 .contact-info-container h3 {
@@ -1188,9 +1373,34 @@ form .btn-success:hover {
   background-color: #2E9677;
 }
 
-footer {
-  margin-top: 20px;
-  color: white;
+@media (max-width: 567px) {
+  .contact-container {
+    width:700px;
+    margin-left:60px;
+  }
+
+  .contact-info-container {
+      padding: 15px;
+  }
+
+  .contact-item {
+      margin: 5px;
+      padding: 10px;
+  }
+
+  .icon-img{
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+  }
+  .card-text{
+      font-size: small;
+  }
+
+  #contact-btn{
+    width: 180px;
+    height: 60px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1213,31 +1423,6 @@ footer {
       height: 40px;
   }
 }
-
-@media (max-width: 480px) {
-  .contact-info-container {
-      padding: 15px;
-  }
-
-  .contact-item {
-      margin: 5px;
-      padding: 10px;
-  }
-
-  form .btn-success {
-      width: 80px;
-      height: 30px;
-  }
-  .phone-icon, .email-icon {
-      width: 40px;
-      height: 40px;
-  }
-  .card-text{
-      font-size: small;
-  }
-}
-
-
 
 footer {
   margin-top: 20px;
@@ -1293,7 +1478,7 @@ footer {
 * Responsive Media Queries */
 
 /* Tablets (768px to 1024px) */
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   #hero {
     flex-direction: column;
     height: auto;
@@ -1501,8 +1686,6 @@ footer {
     display:block;
   }
 }
-
-
 
 /***************** Blogs ***************/
 
